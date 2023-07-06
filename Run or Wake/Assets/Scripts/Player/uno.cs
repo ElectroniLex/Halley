@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class uno : MonoBehaviour
 {
     private CharacterController characterController;
     private Vector3 direction;
