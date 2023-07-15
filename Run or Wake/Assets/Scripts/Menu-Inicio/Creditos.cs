@@ -9,6 +9,13 @@ public class Creditos : MonoBehaviour
         Invoke("WaitToEnd", 10);
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+    }
 
     public void WaitToEnd()
     {
