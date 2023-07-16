@@ -5,11 +5,13 @@ public class PlayerController : MonoBehaviour
 {
     bool alive = true;
 
-    public float speed;
+    public float speed = 5;
     [SerializeField] Rigidbody rb;
 
     float horizontalInput;
-    [SerializeField] private float horizontalMultiplier = 2;
+    [SerializeField] float horizontalMultiplier = 2;
+
+    public float speedIncreasePerPoint = 0.1f;
 
     private void FixedUpdate()
     {
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
 

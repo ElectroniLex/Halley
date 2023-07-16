@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Almohada : MonoBehaviour
 {
-    public float turnSpeed = 90f;
+    [SerializeField] float turnSpeed = 90f;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Obstacle>() != null)
         {
             Destroy(gameObject);
             return;
-            Debug.Log("Destruir el objeto almuhada");
+            //Debug.Log("Destruir el objeto almuhada");
         }
 
         //Cheak that the object we collided with is the player
@@ -23,7 +25,7 @@ public class Almohada : MonoBehaviour
 
         //Add to the players score
 
-        GameManager.inst.IncrementScore();
+        GameManager.inst.IncrementScore ();
         //Destroy this almuhada score
         Destroy(gameObject);
     }
