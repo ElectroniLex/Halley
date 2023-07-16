@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
-    public Transform player;
+    [SerializeField] Transform player;
     Vector3 offset;
 
 

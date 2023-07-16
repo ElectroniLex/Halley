@@ -3,18 +3,20 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     GroundSpawn groundSpawn;
+    [SerializeField] GameObject AlmuhadaPrefab;
+    [SerializeField] GameObject obstaculePrefab;
 
 
     private void Start()
     {
         groundSpawn = GameObject.FindObjectOfType<GroundSpawn>();
-        SpawnObstacule();
-        SpawnAlmuhada();
+        //SpawnObstacule();
+        //SpawnAlmuhada();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        groundSpawn.SpawnTile();
+        groundSpawn.SpawnTile(true);
         Destroy(gameObject, 2);
     }
 
@@ -23,19 +25,18 @@ public class GroundTile : MonoBehaviour
 
     }
 
-    public GameObject obstaculePrefab;
 
-    void SpawnObstacule()
+    public void SpawnObstacle()
     {
-        int obstacleSpawn = Random.Range(2, 5);
-        Transform spawnPoint = transform.GetChild(obstacleSpawn).transform;
+        int obstacleSpawnIndex = Random.Range(2, 5);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
         Instantiate(obstaculePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 
-    public GameObject AlmuhadaPrefab;
+    
 
-    void SpawnAlmuhada()
+    public void SpawnAlmuhada()
     {
         int AlmuhadaToSpanw = 10;
 
