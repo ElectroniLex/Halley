@@ -1,8 +1,8 @@
+using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,30 +13,24 @@ public class GameManager : MonoBehaviour
     //
     [SerializeField] PlayerController playerController;
 
-
-
-    public void IncrementScore ()
+    public void IncrementScore()
     {
         score++;
         scoreText.text = "SCORE: " + score;
-        //**//
+        // Increase the player's speed
         playerController.speed += playerController.speedIncreasePerPoint;
-
     }
 
-    private void Awake()
+    private void Awake ()
     {
         inst = this;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private void Start () {
+
+	}
+
+	private void Update () {
+	
+	}
 }
