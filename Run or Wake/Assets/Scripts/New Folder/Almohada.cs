@@ -11,7 +11,7 @@ public class Almohada : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-           // Debug.Log("Destruir el objeto almuhada");
+            //Debug.Log("Destruir el objeto almuhada");
         }
 
         //Cheak that the object we collided with is the player
@@ -27,7 +27,7 @@ public class Almohada : MonoBehaviour
         //Destroy this almuhada score
         Destroy(gameObject);
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
