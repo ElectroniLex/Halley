@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     int score;
     public static GameManager inst;
     //
+    public float speed = 5;
     [SerializeField] TMP_Text scoreText;
     //
     [SerializeField] PlayerController playerController;
