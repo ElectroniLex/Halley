@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dfc7e95e9f8ec224eab1f680dba270a6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfc7e95e9f8ec224eab1f680dba270a6, type: 3}
       propertyPath: m_LocalScale.x
@@ -110,6 +110,10 @@ MonoBehaviour:
   rb: {fileID: 91779910078800850}
   horizontalMultiplier: 2
   speedIncreasePerPoint: 1
+  jumpForce: 600
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!54 &91779910078800850
 Rigidbody:
   m_ObjectHideFlags: 0

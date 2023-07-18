@@ -11,13 +11,12 @@ public class Almohada : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-            //Debug.Log("Destruir el objeto almuhada");
+            
         }
 
         //Cheak that the object we collided with is the player
         if (other.gameObject.name != "Player")
         {
-            //Debug.Log("Collision con el player y el objeto almuhada");
             return;
         }
 

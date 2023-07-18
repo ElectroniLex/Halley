@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
 
     public float speedIncreasePerPoint = 0.1f;
 
+    [SerializeField] float jumpForce = 600f;
+    [SerializeField] LayerMask groundMask;
+
     private void FixedUpdate ()
     {
         if (!alive) return;
@@ -24,6 +27,12 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+            Debug.Log("Saltar");
+        }
 
         if (transform.position.y < -5)
         {
@@ -43,5 +52,16 @@ public class PlayerController : MonoBehaviour
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void Jump()
+    {
+        //Cheack whether we are currently grounded
+        float height = GetComponent<Collider>().bounds.size.y;
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down,(height /2) + 0.1f, groundMask );
+        
+        //IF we are , jump
+
+        rb.AddForce(Vector3.up * jumpForce);
     }
 }

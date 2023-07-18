@@ -5,6 +5,8 @@ public class GroundTile : MonoBehaviour
     GroundSpawn groundSpawn;
     [SerializeField] GameObject AlmuhadaPrefab;
     [SerializeField] GameObject obstaculePrefab;
+    [SerializeField] GameObject tallObstaclePrefab;
+    [SerializeField] float      tallObstacleChance = 0.2f;
 
 
     private void Start()
@@ -28,10 +30,23 @@ public class GroundTile : MonoBehaviour
 
     public void SpawnObstacle()
     {
+        //Choose with obstacle to spawn 
+         GameObject obstacleToSpawn = obstaculePrefab;
+        float random = Random.Range(0f, 1f);
+
+        if (random < tallObstacleChance)
+        {
+            obstacleToSpawn = tallObstaclePrefab;
+        }
+
+        
+        //Choose a ramdom point to spanw  the obstacle
         int obstacleSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
-        Instantiate(obstaculePrefab, spawnPoint.position, Quaternion.identity, transform);
+        //Spawn the obstacle at the position
+        //Instantiate(obstaculePrefab, spawnPoint.position, Quaternion.identity, transform);
+        Instantiate(obstacleToSpawn, spawnPoint.position, Quaternion.identity, transform);
     }
 
     
