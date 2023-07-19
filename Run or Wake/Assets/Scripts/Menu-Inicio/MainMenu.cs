@@ -9,4 +9,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Creditos");
     }
+
+    public void SeleccionEscenarios()
+    {
+        SceneManager.LoadScene("SeleccionEscenarios");
+    }
 }
