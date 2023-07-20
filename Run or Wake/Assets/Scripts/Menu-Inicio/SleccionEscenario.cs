@@ -22,6 +22,6 @@ public class SleccionEscenario : MonoBehaviour
     }
     public void WaitToEnd()
     {
-        SceneManager.LoadScene("Menu");
+       // SceneManager.LoadScene("Menu");
     }
 }
