@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Login.unity
-    guid: dbbbb43f373adcf438b27674721427ed
-  - enabled: 0
-    path: Assets/Scenes/Menu-Principal.unity
-    guid: 0a283be23d53de84d80472dd320d81f1
-  - enabled: 0
-    path: Assets/Scenes/Juego.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/player.unity
-    guid: 00af5e0496c8e004f9852567b4d1b5e5
+    path: Assets/Scenes/Menu.unity
+    guid: 8f0f31cd626283e49aed4147d74b35da
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: d950ecccef46f1f4383ff58f711e9ce9
+  - enabled: 1
+    path: Assets/Scenes/Escenario-Bosque.unity
+    guid: 1a8ef20168859304c91a8b87cd1ac75b
+  - enabled: 1
+    path: Assets/Scenes/Escenario-Desierto.unity
+    guid: 1fda14c13f6589f42bcaf4f26acd58e4
+  - enabled: 1
+    path: Assets/Scenes/Ecenario-Calle.unity
+    guid: 8c0260f50b5e0234f8b7bb3c4beab3a8
   m_configObjects: {}

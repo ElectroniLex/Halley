@@ -9,20 +9,23 @@ public class CambiarNivel : MonoBehaviour
     [SerializeField] GameObject PanelEcenarios;
     [SerializeField] GameObject PanelGlobal;
 
+    [SerializeField] string EcenarioBosque;
+    [SerializeField] string EcenarioDesierto;
+    [SerializeField] string EcenarioCiudad;
 
     public void SeleccionCiudad()
     {
-        SceneManager.LoadScene("Escena_calle_01");
+        SceneManager.LoadScene(EcenarioCiudad);
         Debug.Log("Abriendo ecenario Ciudad...");
     }
     public void SeleccionBosque()
     {
-        //SceneManager.LoadScene("Escenario-Bosque");
+        SceneManager.LoadScene(EcenarioBosque);
         Debug.Log("Abriendo ecenario Bosque...");
     }
     public void SeleccionDesierto()
     {
-        //SceneManager.LoadScene("Escenario-Desierto");
+        SceneManager.LoadScene(EcenarioDesierto);
         Debug.Log("Abriendo ecenario Desierto...");
     }
 
