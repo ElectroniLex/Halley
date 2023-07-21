@@ -155,6 +155,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.HalleyGameStudio.RunorWake
+    Standalone: com.Halley-Game-Studio.Run-or-Wake
   buildNumber:
     Bratwurst: 0
     Standalone: 0
