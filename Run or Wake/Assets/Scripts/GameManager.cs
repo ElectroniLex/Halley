@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = "SCORE: " + score;
-        //Debug.Log(score);
         // Increase the player's speed
         playerController.speed += playerController.speedIncreasePerPoint;
     }
