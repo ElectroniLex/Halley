@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,10 +9,15 @@ public class CambiarNivel : MonoBehaviour
 {
     [SerializeField] GameObject PanelEcenarios;
     [SerializeField] GameObject PanelGlobal;
+    [SerializeField] GameObject PanelNotificacion;
 
     [SerializeField] string EcenarioBosque;
     [SerializeField] string EcenarioDesierto;
     [SerializeField] string EcenarioCiudad;
+
+    [SerializeField] TMP_Text NotificacionTexto;
+
+
 
     public void SeleccionCiudad()
     {
@@ -38,6 +44,13 @@ public class CambiarNivel : MonoBehaviour
     {
         PanelGlobal.SetActive(true);
         PanelEcenarios.SetActive(false);
+    }
+
+    public void AbrirPanelNotificacion()
+    {
+        PanelNotificacion.SetActive(true);
+
+        
     }
 
     

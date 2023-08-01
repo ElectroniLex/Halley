@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4279083443735622061}
   - component: {fileID: 3855002984625820529}
   m_Layer: 6
-  m_Name: GrooundTile-Desierto
+  m_Name: GrooundTile-Bosque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
