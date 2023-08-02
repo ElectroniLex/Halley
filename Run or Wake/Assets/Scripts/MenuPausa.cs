@@ -37,16 +37,16 @@ public class MenuPausa : MonoBehaviour
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }
+    public void Reiniciar()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void MenuPrincipal() 
     {
         //juegoPausado = false;
         //Time.timeScale = 1f;
         SceneManager.LoadSceneAsync("Menu");
-    }
-
-    public void Cerrar(){
-        Debug.Log("Cerrando juego");
-        Application.Quit();
     }
 }

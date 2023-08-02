@@ -23,16 +23,19 @@ public class CambiarNivel : MonoBehaviour
     {
         SceneManager.LoadScene(EcenarioCiudad);
         Debug.Log("Abriendo ecenario Ciudad...");
+        Time.timeScale = 1f;
     }
     public void SeleccionBosque()
     {
         SceneManager.LoadScene(EcenarioBosque);
         Debug.Log("Abriendo ecenario Bosque...");
+        Time.timeScale = 1f;
     }
     public void SeleccionDesierto()
     {
         SceneManager.LoadScene(EcenarioDesierto);
         Debug.Log("Abriendo ecenario Desierto...");
+        Time.timeScale = 1f;
     }
 
     public void AbrirPanelEcenarios()
@@ -46,11 +49,18 @@ public class CambiarNivel : MonoBehaviour
         PanelEcenarios.SetActive(false);
     }
 
+    //Notificacion
     public void AbrirPanelNotificacion()
     {
+        NotificacionTexto.text = "Disponible para la proxima actualización";
         PanelNotificacion.SetActive(true);
 
         
+    }
+    public void SalirPanelNotificacion()
+    {
+       
+        PanelNotificacion.SetActive(false);
     }
 
     
